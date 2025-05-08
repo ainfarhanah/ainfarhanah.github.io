@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 1rem;
-  }
-}
 
+@media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+      margin: 0;
+    }
+  
+    .container-inner {
+      flex-direction: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  
+    .button {
+      width: 80%;
+      margin: 8px 0;
+    }
+  
+    .card {
+      width: 90%;
+    }
+  }
 body{
     font-family: "Cascadia Code", sans-serif;
     font-optical-sizing: auto;
@@ -37,12 +53,14 @@ p{
     background-color: black;
     color: #ccc;
     border: 1px #ccc solid !important;
-    font-size: 10px;
-    padding: 16px;
-    margin: 5px 10px;
+    font-size: 12px;
+    padding: 10px 14px;
+    margin: 5px;
     cursor: crosshair;
     text-align: center;
     display: inline-block;
+    width: auto;
+    box-sizing: border-box;
 }
 
 .button:hover{
@@ -65,14 +83,16 @@ h1{
 }
 
 .card{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     text-align: justify;
     align-items: center;
     justify-items: center;
-    margin: 5px 10px;
+    margin: 10px 10px;
+    box-sizing: 10px;
 }
 
 .isDisabled{
@@ -80,3 +100,12 @@ h1{
     background-color: #ccc; 
     color: black;
 }
+
+img, iframe, video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
